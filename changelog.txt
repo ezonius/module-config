@@ -1,0 +1,140 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+Date: 1 / 14 / 2025
+
+  Major Features:
+    - Completely reworked the settings behind module effects.
+    - Removed basic and advanced settings, now the settings are simpler and more straight forward.
+
+---------------------------------------------------------------------------------------------------
+Version: 2.1.1
+Date: 1 / 13 / 2025
+
+  Bugfixes:
+    - Fixed the incorrect date in the changelog
+    - Fixed that all module recipes would have icons regardless of the setting choice.
+    - Fixed issues with all module icons when the setting was set to none
+  Changes:
+    - Slightly shifted the icon numbers when modules are placed in beacons to show the module lights more.
+
+---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 1 / 13 / 2025
+
+  Features:
+    - Added beacon tints for productivity and quality modules.
+    - Added graphics for producitvity and quality modules in beacons.
+    - All generated modules will tint beacons and show in beacons now.
+    - Added a setting which allows module numbers to display on modules in beacons. Only displays the first two modules.
+    - Added a setting to enable/disable alt mode for modules in beacons. Useful for module slots > 2.
+    - Added settings for each module effect regarding what recipes they can act upon.
+  Bugfixes:
+    - Fixed an error regarding module effects not being properly clamped to the limit.
+  Changes:
+    - Changed the major version number to reflect all the recent major changes regarding becons.
+    - Lowered the max level of all modules back to 255 to accomodate for module numbers in beacons. (sorry)
+    - Slightly renamed some settings.
+
+---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 1 / 2 / 2025
+
+  Features:
+    - Added a setting to choose when modules should have the numbers added to their icons which denote their tiers. All, new modules, or none.
+  Changes:
+    - Changed the in game name and description to better match the new control over beacons.
+
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 1 / 2 / 2025
+
+  Features:
+    - Moved a few tweaks to the data updates stage to hopefully mesh better with other mods
+    - Added a setting to customize how multiple beacons affect one machine, with a few built in by default such as overload mechanics.
+    - Added a setting to control how many modules a beacon can hold
+  Changes:
+    - Tweaked the thumbnail
+    - When the extra item group is enabled, beacons will also be moved into that tab.
+    - Added a setting to customize beacon distribution effects, and how quality affects it
+    - Reworded several settings to better describe their purpose
+
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 12 / 28 / 2024
+
+  Changes:
+    - Changed the prototypes to generate during the data stage rather than data-updates.
+    - [Quality] With the item groups setting enabled, the item group icon will have quality modules as well.
+  Bugfixes:
+    - [Quality] higher tiers of modules can now be recycled
+
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 12 / 14 / 2024
+
+  Bugfixes:
+    - [Quality] Quality modules cannot be inserted into beacons without the proper setting enabled
+    - [Quality] Fixed an issue with quality module speed effects causing crashes when set to linear
+
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 12 / 12 / 2024
+
+  Bugfixes:
+    - [Space Age] Tier 3 Efficiency now requires 5 spoilage rather than 1
+
+  Changes:
+    - Removed the basic settings for any modules that do not have a given effect. For example, speed modules no longer have basic options for productivity, as the basic settings scale from existing effects.
+
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 11 / 29 / 2024
+
+  Compatability:
+    - [Quality] Changed the quality dependence to optional
+
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 11 / 28 / 2024
+
+  Major Features:
+    - Added support for 2.0
+    - Added support for Space Age
+    - Added support for quality modules
+  Compatability:
+    - Removed Janky EMP compatability (not needed anymore!!)
+    - Kinda removed most mod compatability. The current solution was very half baked, and most overhaul mods do not even work for 2.0. Use older versions for those scenarios.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 8 / 19 / 2024
+
+  Changes:
+    - Changed the max level to 999 for each module. No clue when this would be useful but... here you go
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 8 / 15 / 2024
+
+  Compatability:
+    - Janky EMP compatability + if janky quality is enabled
+    - Some janky mod compatability for mods with additional modules. I had lots of stuff going on so this took a while and may not be perfect :)
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 6 / 11 / 2024
+
+  Major Features:
+    - Uploaded the mod
+
+  Features:
+    - Basic settings if a player does not want to do crazy customization
+    - Allows players to choose what effects a module should have, and how they should scale
+    - Allows players to generate up to 256 tiers of modules
+    - Players can input a custom math expression to determine technology costs.
+    - Players can control the amount of advanced circuits, processing units, and modules used as input for a recipe
+    - Players can control the amount of modules crafted from a recpe.
+    - By default there is a separate tab in the inventory for modules only
+    - Icons of modules are generated automatically depending on the level and type of module
+    - Crafting times can be controlled by the player
+    - Science times can be controlled by the player
