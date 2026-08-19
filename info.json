@@ -1,13 +1,13 @@
 
 {
   "name": "module-config",
-  "version": "2.2.0",
-  "factorio_version": "2.0",
+  "version": "2.2.1",
+  "factorio_version": "2.1",
   "title": "Module and Beacon Config",
   "author": "Bunshaman",
   "contact": "bunshaman on discord",
   "dependencies": ["base >= 2.0.0", 
     "? quality",
     "? space-age"],
-  "description": "This mod allows you to fully customize vanilla beacons and what effects they allow, as well as fully customize modules such as how many tiers exist and how each effect scales on a module. Productivity in beacons, Efficiency Module 100's, Exponential Speed Modules, etc."
+  "description": "Now on 2.1! This mod allows you to fully customize vanilla beacons and what effects they allow, as well as fully customize modules such as how many tiers exist and how each effect scales on a module. Productivity in beacons, Efficiency Module 100's, Exponential Speed Modules, etc."
 }
