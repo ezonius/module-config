@@ -54,7 +54,8 @@ for module, _ in pairs(modules) do
                 { 
                     type = "recipe",
                     name = module.."-module-3",
-                    categories = {"electromagnetics"},
+                    -- "crafting" like vanilla tiers 1-2; space-age data-updates adds "electromagnetics" for this name automatically
+                    categories = {"crafting"},
                     allow_decomposition = true,
                     icons = {
                         {
@@ -78,7 +79,8 @@ for module, _ in pairs(modules) do
                     { 
                         type = "recipe",
                         name = module.."-module-"..level,
-                        categories = {"electromagnetics"},
+                        -- tier 4+ is custom to this mod, so keep hand/assembler + EM plant explicitly
+                        categories = {"crafting", "electromagnetics"},
                         allow_decomposition = true,
                         icons = {
                             {
@@ -169,14 +171,6 @@ if settings.startup["icons-on-modules"].value == "all" or settings.startup["icon
 end
 
 
--- yeah whatever okay whatever man i don't work here
-if mods["space-age"] then
-    data.raw["recipe"]["speed-module"]["categories"] = {"electromagnetics"}
-    data.raw["recipe"]["productivity-module"]["categories"] = {"electromagnetics"}
-    data.raw["recipe"]["quality-module"]["categories"] = {"electromagnetics"}
-    data.raw["recipe"]["efficiency-module"]["categories"] = {"electromagnetics"}
-    data.raw["recipe"]["speed-module-2"]["categories"] = {"electromagnetics"}
-    data.raw["recipe"]["productivity-module-2"]["categories"] = {"electromagnetics"}
-    data.raw["recipe"]["quality-module-2"]["categories"] = {"electromagnetics"}
-    data.raw["recipe"]["efficiency-module-2"]["categories"] = {"electromagnetics"}
-end
+-- Do NOT set categories to {"electromagnetics"} here: that would remove hand/assembler (crafting) crafting.
+-- Space Age's data-updates stage already appends "electromagnetics" to vanilla module recipes
+-- (and this mod's generated ones share those names) via add_recipe_category, which runs after this file.

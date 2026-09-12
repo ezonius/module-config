@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.2
+Date: 9 / 12 / 2026
+
+  Bugfixes:
+    - Added missing localization for the module effect extrapolation and values settings.
+    - Fixed the pollution effect settings missing their icon next to the machine icon.
+  Changes:
+    - Added tooltips explaining the extrapolation patterns, the pattern options and the values settings.
+
+---------------------------------------------------------------------------------------------------
 Version: 2.2.1
 Date: 8 / 18 / 2026
 
