@@ -66,6 +66,11 @@ function add_numbers_to_icons(module, prototype, range_min, range_max)  -- Graph
         else
             module_prototype = data.raw[prototype][module.name.."-module-"..level]
         end
+        -- Vanilla tier-3 recipes (when max_level == 3 the recipe is untouched vanilla) have no icons field;
+        -- the engine derives their icon from the result item. Seed it with the mod's module graphic.
+        if not module_prototype["icons"] then
+            module_prototype["icons"] = {{icon = "__module-config__/graphics/"..module.name.."-module-3.png", icon_size = 64}}
+        end
         table.insert(module_prototype["icons"], {icon = "__module-config__/graphics/xxframe.png", icon_size = 64})
         if hundreds > 0 then
             module_prototype["icons"][2] = {icon = "__module-config__/graphics/frame.png", icon_size = 64}
