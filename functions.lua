@@ -151,13 +151,21 @@ function generate_effects(modules, module_type)
 
         -- Need to convert initial_values as a string into a table of floats.
         initial_values = stringToNumberTable(initial_values)
+        -- Several patterns need at least two starting values; a single value would
+        -- index effects[0] (nil) and crash. Pad it so it degrades to a constant series.
+        if #initial_values == 1 then
+            initial_values[2] = initial_values[1]
+        end
         if effect_type == "quality" then
             for key, value in pairs(initial_values) do
                 initial_values[key] = 10 * value  -- Internally the game divides all quality effects by 10
             end
         end
         local max_level = modules[module_type].max_level
-        effect[effect_type] = get_bonus(scaling_type, initial_values, max_level)
+        -- Fall back to the disabled (all-zero) pattern if the scaling type is
+        -- invalid or the pattern function errors, instead of crashing the load.
+        local success, result = pcall(get_bonus, scaling_type, initial_values, max_level)
+        effect[effect_type] = success and result or disabled_pattern(max_level, {})
         
     end
 
