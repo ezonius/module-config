@@ -60,6 +60,32 @@ data.raw["beacon"]["beacon"].icons_positioning[1].max_icons_per_row = math.ceil(
 
 
 
+-- Effect Limits
+-- Per-effect upper/lower bounds on the summed module+beacon effects, applied engine-side.
+-- Values are percent in the settings (300 = 3.0 multiplier); quality uses the engine's x10 stored domain.
+local effect_limits = {
+    productivity = {low = settings.startup["productivity-limits-low"].value / 100, high = settings.startup["productivity-limits-high"].value / 100},
+    speed = {low = settings.startup["speed-limits-low"].value / 100, high = settings.startup["speed-limits-high"].value / 100},
+    consumption = {low = settings.startup["consumption-limits-low"].value / 100, high = settings.startup["consumption-limits-high"].value / 100},
+    pollution = {low = settings.startup["pollution-limits-low"].value / 100, high = settings.startup["pollution-limits-high"].value / 100}
+}
+if mods["quality"] then
+    effect_limits.quality = {low = settings.startup["quality-limits-low"].value / 10, high = settings.startup["quality-limits-high"].value / 10}
+end
+
+for _, type_prototypes in pairs(data.raw) do
+    for _, proto in pairs(type_prototypes) do
+        if proto.effect_receiver then
+            for effect, limits in pairs(effect_limits) do
+                proto.effect_receiver[effect .. "_limits"] = limits
+            end
+        end
+    end
+end
+
+
+
+
 -- Beacon Profiles
 local beacon_profile = {}
 if settings.startup["vanilla-beacon-profile"].value == "default" then

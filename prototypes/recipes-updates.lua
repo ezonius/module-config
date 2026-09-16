@@ -25,6 +25,12 @@ for name, recipe_details in pairs(data.raw["recipe"]) do
         recipe_details.allow_quality = false
     end
 
+    -- Upper bound for the summed productivity effect (engine default is 1000 = uncapped).
+    -- Only touch the per-recipe maximum_productivity (vanilla 3.0) when the user raises/lowers the cap.
+    if recipe_details.allow_productivity and settings.startup["productivity-limits-high"].value ~= 100000 then
+        recipe_details.maximum_productivity = settings.startup["productivity-limits-high"].value / 100
+    end
+
     --if settings.startup["productivity-cap"].value ~= 300 and recipe_details.allow_productivity then
     --    recipe_details.maximum_productivity = settings.startup["productivity-cap"].value / 100
     --    if settings.startup["productivity-cap-recycle"].value == "no-recycle" then

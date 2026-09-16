@@ -1,5 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.2
+Date: 9 / 16 / 2026
+
+  Features:
+    - Added startup settings for per-effect upper and lower limits (Productivity, Speed, Consumption, Pollution, and Quality with the Quality mod). These clamp the summed module+beacon effects engine-side on recipes and machines. Defaults match the vanilla engine caps, so nothing changes unless a limit is edited. Restart required after changing them.
+
+---------------------------------------------------------------------------------------------------
+Version: 2.2.2
 Date: 9 / 12 / 2026
 
   Bugfixes:

@@ -516,6 +516,83 @@ data:extend{
         order = 'c[modules]c[productivity]c[values]d',
         default_value = "0.05,0.07,0.10",
         allow_blank = true
+    },
+
+
+
+    -- Engine Effect Limits (data-stage clamps applied to recipes and machines)
+    {
+        name = 'productivity-limits-high',
+        localised_name = {"", "[color=red]", "Productivity", ": [/color]", {"mod-setting-name.productivity-limits-high"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]a[productivity]a[high]',
+        default_value = 100000,
+        minimum_value = 0,
+        maximum_value = 100000
+    }, {
+        name = 'productivity-limits-low',
+        localised_name = {"", "[color=red]", "Productivity", ": [/color]", {"mod-setting-name.productivity-limits-low"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]a[productivity]b[low]',
+        default_value = -80,
+        minimum_value = -99.99,
+        maximum_value = 100000
+    }, {
+        name = 'speed-limits-high',
+        localised_name = {"", "[color=blue]", "Speed", ": [/color]", {"mod-setting-name.speed-limits-high"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]b[speed]a[high]',
+        default_value = 100000,
+        minimum_value = 0,
+        maximum_value = 100000
+    }, {
+        name = 'speed-limits-low',
+        localised_name = {"", "[color=blue]", "Speed", ": [/color]", {"mod-setting-name.speed-limits-low"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]b[speed]b[low]',
+        default_value = -80,
+        minimum_value = -99.99,
+        maximum_value = 100000
+    }, {
+        name = 'consumption-limits-high',
+        localised_name = {"", "[color=green]", "Consumption", ": [/color]", {"mod-setting-name.consumption-limits-high"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]c[consumption]a[high]',
+        default_value = 100000,
+        minimum_value = 0,
+        maximum_value = 100000
+    }, {
+        name = 'consumption-limits-low',
+        localised_name = {"", "[color=green]", "Consumption", ": [/color]", {"mod-setting-name.consumption-limits-low"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]c[consumption]b[low]',
+        default_value = -80,
+        minimum_value = -99.99,
+        maximum_value = 100000
+    }, {
+        name = 'pollution-limits-high',
+        localised_name = {"", "[color=yellow]", "Pollution", ": [/color]", {"mod-setting-name.pollution-limits-high"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]d[pollution]a[high]',
+        default_value = 100000,
+        minimum_value = 0,
+        maximum_value = 100000
+    }, {
+        name = 'pollution-limits-low',
+        localised_name = {"", "[color=yellow]", "Pollution", ": [/color]", {"mod-setting-name.pollution-limits-low"}},
+        setting_type = 'startup',
+        type = 'double-setting',
+        order = 'c[modules]e[limits]d[pollution]b[low]',
+        default_value = -80,
+        minimum_value = -99.99,
+        maximum_value = 100000
     }
 
 }
@@ -769,6 +846,24 @@ if mods["quality"] then
             order = 'c[modules]d[quality]c[values]e',
             default_value = "0.01,0.02,0.025",
             allow_blank = true
+        }, {
+            name = 'quality-limits-high',
+            localised_name = {"", "[color=white]", "Quality", ": [/color]", {"mod-setting-name.quality-limits-high"}},
+            setting_type = 'startup',
+            type = 'double-setting',
+            order = 'c[modules]e[limits]e[quality]a[high]',
+            default_value = 10000,
+            minimum_value = 0,
+            maximum_value = 10000
+        }, {
+            name = 'quality-limits-low',
+            localised_name = {"", "[color=white]", "Quality", ": [/color]", {"mod-setting-name.quality-limits-low"}},
+            setting_type = 'startup',
+            type = 'double-setting',
+            order = 'c[modules]e[limits]e[quality]b[low]',
+            default_value = 0,
+            minimum_value = -10000,
+            maximum_value = 10000
         },
     }
 end
