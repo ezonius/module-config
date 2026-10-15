@@ -1,11 +1,11 @@
 data:extend{
-    {    
+    {
         name = 'more-tabs',
         setting_type = 'startup',
         type = 'bool-setting',
         order = 'a[basic]a[other]b',
         default_value = true
-    }, {    
+    }, {
         name = 'icons-on-modules',
         setting_type = 'startup',
         type = 'string-setting',
@@ -16,20 +16,20 @@ data:extend{
             "new",
             "none"
         }
-    }, {    
+    }, {
         name = 'icons-on-beacons',
         setting_type = 'startup',
         type = 'bool-setting',
         order = 'a[basic]a[other]d',
         default_value = true
-    }, {    
+    }, {
         name = 'alt-mode-modules-in-beacons',
         setting_type = 'startup',
         type = 'bool-setting',
         order = 'a[basic]a[other]e',
         default_value = false
-    }, 
-    --{    
+    },
+    --{
     --    name = 'productivity-cap',
     --    setting_type = 'startup',
     --    type = 'double-setting',
@@ -37,7 +37,7 @@ data:extend{
     --    default_value = 300,
     --    minimum_value = 0,
     --    maximum_value = 32676
-    --}, 
+    --},
     {
         name = 'modules-per-recipe',
         setting_type = 'startup',
@@ -200,8 +200,8 @@ data:extend{
 
 
     -- Speed Modules
-    {    
-        name = 'max-speed', 
+    {
+        name = 'max-speed',
         localised_name = {"", "[color=blue]", "Speed Module", ": [/color]", {"mod-setting-name.max-speed"}},
         setting_type = 'startup',
         type = 'int-setting',
@@ -218,9 +218,9 @@ data:extend{
         default_value = "constant_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern",
         }
@@ -233,12 +233,12 @@ data:extend{
         default_value = "linear_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern",
-        }    
+        }
     }, {
 	    name = 'speed-productivity-extrapolation',
 		localised_name = {"", "[color=blue]", "          Speed Module", ": [/color]", {"mod-setting-name.speed-productivity-extrapolation"}},
@@ -248,12 +248,12 @@ data:extend{
         default_value = "disabled_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern"
-        }    
+        }
     }, {
 	    name = 'speed-pollution-extrapolation',
 		localised_name = {"", "[color=blue]", "          Speed Module", ": [/color]", {"mod-setting-name.speed-pollution-extrapolation"}},
@@ -263,12 +263,12 @@ data:extend{
         default_value = "disabled_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern"
-        }    
+        }
     }, {
 	    name = 'speed-consumption-values',
 		localised_name = {"", "[color=blue]", "          Speed Module", ": [/color]", {"mod-setting-name.speed-consumption-values"}},
@@ -302,7 +302,7 @@ data:extend{
         default_value = "",
         allow_blank = true
     },
-    
+
 
 
 
@@ -310,7 +310,7 @@ data:extend{
 
 
     -- Efficiency Modules
-    { 
+    {
 	    name = 'max-efficiency',
 		localised_name = {"", "[color=green]", "Efficiency Module", ": [/color]", {"mod-setting-name.max-efficiency"}},
         setting_type = 'startup',
@@ -328,12 +328,12 @@ data:extend{
         default_value = "constant_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern"
-        }      
+        }
     }, {
 	    name = 'efficiency-speed-extrapolation',
 		localised_name = {"", "[color=green]", "          Efficiency Module", ": [/color]", {"mod-setting-name.efficiency-speed-extrapolation"}},
@@ -343,12 +343,12 @@ data:extend{
         default_value = "disabled_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern"
-        }    
+        }
     }, {
 	    name = 'efficiency-productivity-extrapolation',
 		localised_name = {"", "[color=green]", "          Efficiency Module", ": [/color]", {"mod-setting-name.efficiency-productivity-extrapolation"}},
@@ -358,12 +358,12 @@ data:extend{
         default_value = "disabled_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern"
-        }    
+        }
     }, {
 	    name = 'efficiency-pollution-extrapolation',
 		localised_name = {"", "[color=green]", "          Efficiency Module", ": [/color]", {"mod-setting-name.efficiency-pollution-extrapolation"}},
@@ -373,12 +373,12 @@ data:extend{
         default_value = "disabled_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern"
-        }    
+        }
     }, {
 	    name = 'efficiency-consumption-values',
 		localised_name = {"", "[color=green]", "          Efficiency Module", ": [/color]", {"mod-setting-name.efficiency-consumption-values"}},
@@ -412,10 +412,10 @@ data:extend{
         default_value = "",
         allow_blank = true
     },
-    
+
 
     -- Productivity Modules
-    { 
+    {
 	    name = 'max-productivity',
 		localised_name = {"", "[color=red]", "Productivity Module", ": [/color]", {"mod-setting-name.max-productivity"}},
         setting_type = 'startup',
@@ -433,12 +433,12 @@ data:extend{
         default_value = "constant_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern",
-        }    
+        }
     }, {
 	    name = 'productivity-speed-extrapolation',
 		localised_name = {"", "[color=red]", "          Productivity Module", ": [/color]", {"mod-setting-name.productivity-speed-extrapolation"}},
@@ -448,12 +448,12 @@ data:extend{
         default_value = "constant_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern",
-        }    
+        }
     }, {
 	    name = 'productivity-productivity-extrapolation',
 		localised_name = {"", "[color=red]", "          Productivity Module", ": [/color]", {"mod-setting-name.productivity-productivity-extrapolation"}},
@@ -463,12 +463,12 @@ data:extend{
         default_value = "linear_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern",
-        }    
+        }
     }, {
 	    name = 'productivity-pollution-extrapolation',
 		localised_name = {"", "[color=red]", "          Productivity Module", ": [/color]", {"mod-setting-name.productivity-pollution-extrapolation"}},
@@ -478,12 +478,12 @@ data:extend{
         default_value = "linear_pattern",
         allowed_values = {
             "disabled_pattern",
-            "linear_pattern", 
-            "constant_pattern", 
-            "fibonacci_pattern", 
+            "linear_pattern",
+            "constant_pattern",
+            "fibonacci_pattern",
             "exponential_pattern",
             "polynomial_pattern",
-        }    
+        }
     }, {
 	    name = 'productivity-consumption-values',
 		localised_name = {"", "[color=red]", "          Productivity Module", ": [/color]", {"mod-setting-name.productivity-consumption-values"}},
@@ -603,7 +603,7 @@ data:extend{
 -- Quality Modules
 if mods["quality"] then
     data:extend{
-        --{    
+        --{
         --    name = 'productivity-cap-recycle',
         --    setting_type = 'startup',
         --    type = 'string-setting',
@@ -613,7 +613,7 @@ if mods["quality"] then
         --        "less-recycled",
         --        "no-recycle"
         --    }
-        --}, 
+        --},
         {
             name = 'quality-in-beacon',
             setting_type = 'startup',
@@ -648,14 +648,14 @@ if mods["quality"] then
             default_value = "constant_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }    
+            }
         },
-        
+
         {
             name = 'efficiency-quality-extrapolation',
             localised_name = {"", "[color=green]", "          Efficiency Module", ": [/color]", {"mod-setting-name.efficiency-quality-extrapolation"}},
@@ -665,12 +665,12 @@ if mods["quality"] then
             default_value = "disabled_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }    
+            }
         },
 
         {
@@ -682,12 +682,12 @@ if mods["quality"] then
             default_value = "disabled_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }    
+            }
         },
 
 
@@ -718,11 +718,11 @@ if mods["quality"] then
             default_value = "",
             allow_blank = true
         },
-        
 
 
 
-        { 
+
+        {
             name = 'max-quality',
             localised_name = {"", "[color=white]", "Quality Module", ": [/color]", {"mod-setting-name.max-quality"}},
             setting_type = 'startup',
@@ -740,12 +740,12 @@ if mods["quality"] then
             default_value = "disabled_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }    
+            }
         }, {
             name = 'quality-speed-extrapolation',
             localised_name = {"", "[color=white]", "          Quality Module", ": [/color]", {"mod-setting-name.quality-speed-extrapolation"}},
@@ -755,12 +755,12 @@ if mods["quality"] then
             default_value = "constant_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }    
+            }
         }, {
             name = 'quality-productivity-extrapolation',
             localised_name = {"", "[color=white]", "          Quality Module", ": [/color]", {"mod-setting-name.quality-productivity-extrapolation"}},
@@ -770,12 +770,12 @@ if mods["quality"] then
             default_value = "disabled_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }     
+            }
         }, {
             name = 'quality-pollution-extrapolation',
             localised_name = {"", "[color=white]", "          Quality Module", ": [/color]", {"mod-setting-name.quality-pollution-extrapolation"}},
@@ -785,12 +785,12 @@ if mods["quality"] then
             default_value = "disabled_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }    
+            }
         }, {
             name = 'quality-quality-extrapolation',
             localised_name = {"", "[color=white]", "          Quality Module", ": [/color]", {"mod-setting-name.quality-quality-extrapolation"}},
@@ -800,12 +800,12 @@ if mods["quality"] then
             default_value = "constant_pattern",
             allowed_values = {
                 "disabled_pattern",
-                "linear_pattern", 
-                "constant_pattern", 
-                "fibonacci_pattern", 
+                "linear_pattern",
+                "constant_pattern",
+                "fibonacci_pattern",
                 "exponential_pattern",
                 "polynomial_pattern"
-            }    
+            }
         }, {
             name = 'quality-consumption-values',
             localised_name = {"", "[color=white]", "          Quality Module", ": [/color]", {"mod-setting-name.quality-consumption-values"}},

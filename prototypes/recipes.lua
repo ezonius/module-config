@@ -7,7 +7,8 @@ for module, _ in pairs(modules) do
     { 
         type = "recipe",
         name = module.."-module",
-        categories = {"crafting"},
+        -- space-age: EM plant can craft modules like vanilla tier 4+
+        categories = mods["space-age"] and {"crafting", "electromagnetics"} or {"crafting"},
         allow_decomposition = true,
         icons = {
             {
@@ -27,7 +28,7 @@ for module, _ in pairs(modules) do
     { 
         type = "recipe",
         name = module.."-module-2",
-        categories = {"crafting"},
+        categories = mods["space-age"] and {"crafting", "electromagnetics"} or {"crafting"},
         allow_decomposition = true,
         icons = {
             {
@@ -54,8 +55,8 @@ for module, _ in pairs(modules) do
                 { 
                     type = "recipe",
                     name = module.."-module-3",
-                    -- "crafting" like vanilla tiers 1-2; space-age data-updates adds "electromagnetics" for this name automatically
-                    categories = {"crafting"},
+                    -- this mod redefines the recipe, so space-age's data-updates append doesn't apply here; add explicitly
+                    categories = {"crafting", "electromagnetics"},
                     allow_decomposition = true,
                     icons = {
                         {
